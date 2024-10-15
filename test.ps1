@@ -1,7 +1,7 @@
 $foxurl = "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US"
 
-$browseryn = Read-Host "Are you sure you want to run this script? 
-If you do not have a browser installed, you may not be able to access the web. (Y/N)"
+$browseryn = Read-Host "If you do not have a browser installed, you may not be able to access the web.
+Are you sure you want to run this script? (Y/N)"
 
 If ($browseryn -eq 'y'){
     
