@@ -10,12 +10,11 @@ If ($browseryn -eq 'y'){
     
     if ($browseryn -eq 'y'){
         write-host "Please wait while the script installs a browser for you."
-        Invoke-WebRequest -Uri $foxurl -OutFile $env:TEMP\firefox_installer.exe #Downloads firefox installer to temp folder
+        Invoke-WebRequest -Uri $foxurl -OutFile $env:TEMP\firefox_installer.exe
         write-host "The Firefox installer has been downloaded, starting the installation."
-        Start-Process -FilePath $env:TEMP\firefox_installer.exe -ArgumentList "/S" -Wait #Runs installer
-        Remove-Item "$env:TEMP\firefox_installer.exe" #Deletes installer after Firefox has been installed.
-        write-host "Firefox has been installed
-        "
+        Start-Process -FilePath $env:TEMP\firefox_installer.exe -ArgumentList "/S" -Wait
+        Remove-Item "$env:TEMP\firefox_installer.exe"
+        write-host "Firefox has been installed"
 
     } else {
         write-host "Cancelling script."
