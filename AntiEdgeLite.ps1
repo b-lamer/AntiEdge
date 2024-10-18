@@ -2,3 +2,7 @@
 Set-Location -Path "HKLM:\Software\Microsoft"
 Get-Item -Path "HKLM:\SOFTWARE\Microsoft" | New-Item -Name "EdgeUpdate" -Force
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\EdgeUpdate" -Name "DoNotUpdateToEdgeWithChromium" -Value "1" -PropertyType DWORD -Force
+
+
+Set-Location -Path "C:\Program Files (x86)\Microsoft\Edge\Application\*\Installer"
+.\setup.exe --uninstall --system-level --verbose-logging --force-uninstall
